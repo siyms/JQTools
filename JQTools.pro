@@ -38,10 +38,12 @@ SOURCES *= \
 RESOURCES *= \
     $$PWD/qml/qml.qrc
 
-macx {
+mac {
     ICON = $$PWD/icon/icon.icns
+
+    CONFIG += sdk_no_version_check
 }
 
 win32 {
-    RC_FILE = $$PWD/icon/icon.rc
+    RC_ICONS = $$PWD/icon/icon.ico
 }

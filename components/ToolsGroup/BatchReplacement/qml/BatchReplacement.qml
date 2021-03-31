@@ -38,14 +38,14 @@ Item {
 
         MaterialLabel {
             x: 64
-            y: 86
+            y: 66
             text: "搜索的文件后缀"
         }
 
         MaterialCheckBox {
             id: checkBoxForCpp
             x: 64
-            y: 112
+            y: 92
             text: "h/c/cc/cp/cpp/hpp/inc/i/ii/m"
             checked: true
         }
@@ -53,7 +53,7 @@ Item {
         MaterialCheckBox {
             id: checkBoxForQmake
             x: 64
-            y: 172
+            y: 142
             text: "pro/pri/prf/prl/qrc"
             checked: true
         }
@@ -61,15 +61,31 @@ Item {
         MaterialCheckBox {
             id: checkBoxForQml
             x: 64
-            y: 232
+            y: 192
             text: "qml"
+            checked: true
+        }
+
+        MaterialCheckBox {
+            id: checkBoxForUi
+            x: 64
+            y: 242
+            text: "ui"
+            checked: true
+        }
+
+        MaterialCheckBox {
+            id: checkBoxForJsonAndXml
+            x: 64
+            y: 292
+            text: "json/xml"
             checked: true
         }
 
         MaterialCheckBox {
             id: checkBoxForNoSuffixFile
             x: 64
-            y: 292
+            y: 342
             text: "无后缀文件"
             checked: true
         }
@@ -77,7 +93,7 @@ Item {
         MaterialCheckBox {
             id: checkBoxForFileAndDir
             x: 64
-            y: 352
+            y: 392
             text: "文件名/文件夹名"
             checked: true
         }
@@ -85,7 +101,7 @@ Item {
         MaterialCheckBox {
             id: checkBoxForMultiCase
             x: 64
-            y: 412
+            y: 442
             text: "匹配英文大小写"
             checked: true
         }
@@ -149,6 +165,17 @@ Item {
                 if ( checkBoxForQml.checked )
                 {
                     suffixs.push( "qml" );
+                }
+
+                if ( checkBoxForUi.checked )
+                {
+                    suffixs.push( "ui" );
+                }
+
+                if ( checkBoxForJsonAndXml.checked )
+                {
+                    suffixs.push( "json" );
+                    suffixs.push( "xml" );
                 }
 
                 if ( checkBoxForQmake.checked )
